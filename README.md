@@ -1,7 +1,7 @@
 # Delete-duplicate-rows-from-DB-group-by-one-column
 
-DELETE c1 FROM users_data c1
-INNER JOIN users_data c2 
-WHERE
-    c1.user_id > c2.user_id AND 
-    c1.data_fid_data_id = c2.data_fid_data_id;
+DELETE R1 FROM RESULT R1
+JOIN RESULT R2
+ON R1.CHEMISTRY_MARKS = R2.CHEMISTRY_MARKS
+AND R1.MATHS_MARKS = R2.MATHS_MARKS
+AND R2.STUDENT_ID < R1.STUDENT_ID;
